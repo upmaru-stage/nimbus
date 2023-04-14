@@ -20,6 +20,7 @@ build:
     - '*'
     - .next
   command: |
+    npm install
     npm run build
 
 run: 
