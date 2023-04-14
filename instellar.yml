@@ -4,6 +4,8 @@ dependencies:
     - nodejs
     - npm
   runtime:
+    - nodejs
+    - npm
     - bash
     - curl
     - s6
@@ -25,8 +27,11 @@ run:
   services:
   - name: web
     binary: npm
+    path: /usr/bin
     start:
       call: start
+    stop:
+      kill: true
 
 hook:
   post-install: |
