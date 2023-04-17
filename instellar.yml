@@ -31,8 +31,6 @@ run:
     path: /usr/bin
     start:
       call: 'server.js'
-    stop:
-      kill: true
 
 hook:
   post-install: |
