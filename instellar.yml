@@ -11,6 +11,7 @@ dependencies:
     - s6
     - jq
     - ca-certificates
+    - icu-data-full
     - nimbus-openrc
 
 stack: alpine/3.17
