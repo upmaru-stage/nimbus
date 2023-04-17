@@ -18,6 +18,7 @@ stack: alpine/3.17
 build:
   destinations: 
     - '.next/standalone/*'
+    - '.next/standalone/.next'
   command: |
     npm install
     npm run build
