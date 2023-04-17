@@ -3,6 +3,7 @@ dependencies:
   build:
     - nodejs
     - npm
+    - vips-dev
   runtime:
     - nodejs
     - npm
