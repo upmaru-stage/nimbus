@@ -18,10 +18,11 @@ stack: alpine/3.17
 build:
   destinations: 
     - '.next/standalone'
-    - '.next/static'
   command: |
     npm install
     npm run build
+
+    cp -r .next/static .next/standalone/.next/
 
 run: 
   name: nimbus
