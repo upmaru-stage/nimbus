@@ -17,8 +17,8 @@ stack: alpine/3.17
 
 build:
   destinations: 
-    - '.next/standalone/*'
-    - '.next/standalone/.next'
+    - '.next/standalone'
+    - '.next/static'
   command: |
     npm install
     npm run build
@@ -30,7 +30,7 @@ run:
     binary: node
     path: /usr/bin
     start:
-      call: 'server.js'
+      call: 'standalone/server.js'
 
 hook:
   post-install: |
