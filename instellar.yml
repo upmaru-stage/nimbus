@@ -27,10 +27,10 @@ run:
   name: nimbus
   services:
   - name: web
-    binary: npm
+    binary: node
     path: /usr/bin
     start:
-      call: start
+      call: 'server.js'
     stop:
       kill: true
 
