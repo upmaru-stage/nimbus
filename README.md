@@ -8,7 +8,7 @@ This portfolio is built with **Next.js** and a library called [Nextra](https://n
 - Easily categorize posts with tags
 - Fast, optimized web font loading
 
-https://demo.vercel.blog
+https://zacksiri.dev
 
 ## Configuration
 
@@ -19,9 +19,7 @@ https://demo.vercel.blog
 
 ## Deploy your own
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/blog)
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/blog&project-name=portfolio&repository-name=portfolio)
+Deploy the example using [Instellar.app](https://github.com/upmaru-stage/nimbus/blob/main/instellar.yml) or preview live on [zacksiri.dev](https://zacksiri.dev)
 
 ## How to use
 
@@ -34,5 +32,3 @@ yarn create next-app --example blog my-blog
 # or
 pnpm create next-app --example blog my-blog
 ```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
