@@ -4,7 +4,7 @@ export default function Document() {
   const meta = {
     title: 'zacksiri.dev',
     description: 'Zack Siri wearing a developer hat.',
-    image: 'https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png',
+    image: 'https://zacksiri.dev/images/zack.jpg',
   }
 
   return (
