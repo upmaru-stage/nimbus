@@ -48,4 +48,4 @@ hook:
 
   post-deinstall: |
     rc-service nimbus stop
-    rc-update del rdio
+    rc-update del nimbus
