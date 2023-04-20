@@ -21,6 +21,7 @@ export default function Document() {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.image} />
+        <script defer data-domain="zacksiri.dev" src="https://plausible.io/js/script.js"></script>
       </Head>
       <body>
         <Main />
