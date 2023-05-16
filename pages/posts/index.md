@@ -1,9 +1,7 @@
 ---
 type: posts
 title: Posts
-date: 2021-03-18
+date: 2023-05-16
 ---
 
 # Posts
-
-Coming soon.
