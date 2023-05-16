@@ -56,5 +56,9 @@ While many may challenge my decisions of saving bandwidth. I do have my reasons.
 
 ![fast deployments](/images/why-i-created-pakman/upgrade-timestamp.png)
 
+The final built artifact that gets shipped over the wire for this NextJS blog weighs in at 5.69 MB
+
+![built artifact](/images/why-i-created-pakman/built-artifact.png)
+
 Welcome to the future!
 
