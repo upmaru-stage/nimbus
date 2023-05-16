@@ -8,7 +8,7 @@ author: You
 
 # Why I created the PAKman Build System
 
-PAKman is one of the core modules that power [instellar.app](https://instellar.app). It's [open-sourced](https://github.com/upmaru/pakman) and builds your application using github actions into alpine packages that get delivered to an S3 bucket you specify via instellar. Our platform then takes that built package and deploys the application on your infrastructure.
+PAKman is one of the 4 core modules that power [instellar.app](https://instellar.app). It's [open-sourced](https://github.com/upmaru/pakman) and builds your application using github actions into alpine packages that get delivered to an S3 compatible bucket you specify via instellar. Our platform then takes that built package and deploys the application on your infrastructure.
 
 ![basic workflow](/images/why-i-created-pakman/workflow-diagram.png)
 
