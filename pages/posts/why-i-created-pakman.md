@@ -3,7 +3,7 @@ title: Why I created the PAKman Build System
 date: 2023/5/16
 description: Why I created PAKman a build system based on Alpine packages using Elixir programming language.
 tag: development, infrastructure
-author: You
+author: Zack Siri
 ---
 
 # Why I created the PAKman Build System
