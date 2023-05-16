@@ -52,7 +52,7 @@ While I still needed to use a docker container to create the final build since t
 
 ![ship small packages](/images/why-i-created-pakman/ship-small-package.png)
 
-While many may challenge my decisions of saving bandwidth. I do have my reasons. I believe if something can be done well it should be done. In the big picture the goals of PAKman serves our mission for [instellar.app](https://instellar.app). Instellar enables anyone to run their own PaaS on their own infrastructure. This means it's important for us to keep the cost of ownership low. If we can save on bandwidth costs for our customers it's our duty to do it. Another valuable asset we save is time. Small packages mean deployments are fast! The update for the blog you are reading now was deployed in 6 seconds!
+While many may challenge my decisions of saving bandwidth. I do have my reasons. I believe if something can be done well it should be done. In the big picture the goals of PAKman serves our mission for [instellar.app](https://instellar.app). Instellar enables anyone to run their own PaaS on their own infrastructure. This means it's important for us to keep the cost of ownership low. If we can save on bandwidth costs for our customers it's our duty to do it. Another valuable asset we save is time. Small packages mean deployments are fast! The update for the blog you are reading now was deployed in 6 seconds! You can see [PAKman in action](https://github.com/upmaru-stage/nimbus/actions).
 
 ![fast deployments](/images/why-i-created-pakman/upgrade-timestamp.png)
 
