@@ -1,7 +1,7 @@
-# Portfolio Starter Kit
+# zacksiri.dev
+
+This repository serves as the NextJS demo app for instellar.app and as my personal dev related blog.
 
 ![avatar](/public/images/zack-ai.jpg)
-
-Welcome to my personal dev related blog.
 
 Check out https://zacksiri.dev
