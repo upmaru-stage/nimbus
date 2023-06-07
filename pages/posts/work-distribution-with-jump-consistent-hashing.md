@@ -215,7 +215,7 @@ I want to have the latest state computed, but I also realize that we do not need
 
  You can see from the log output that the work is evenly distributed across 3 nodes.
 
- __Thank you for reading! If you need help with your distributed application or need help with DevOps / Deployment work, I'm available for consulting. Feel free to reach out to [me@zacksiri.dev](mailto:me@zacksiri.dev)__
+ __Thank you for reading! If you need help with your distributed applications, elixir, go, typescript or need help with DevOps / Deployment work, I'm available for consulting. Feel free to reach out to [me@zacksiri.dev](mailto:me@zacksiri.dev)__
 
  ## Bonus
 
