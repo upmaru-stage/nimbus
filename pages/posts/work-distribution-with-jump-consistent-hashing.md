@@ -14,7 +14,7 @@ On https://instellar.app, we run multiple (3) nodes to ensure high availability.
 [:"instellar@instellar-staging-web-03", :"instellar@instellar-staging-web-02"]
 ```
 
-One of the problems that come with distributed computing is how do you ensure a job only runs once. If you use a job queue, the job library will have mechanics to guarantee your job runs once, throwing everything into a job queue is one way of solving the problem, however given the nature of jobs queue when the job runs is pretty non-deterministic. It's close to real-time if your job queue is empty, and it can sit and wait in a queue if your system is busy. This can lead to a few problems. Given that this is an elixir based application, coming up with a simple mechanic to ensure updates in the system happen in real-time should be trivial.
+One of the problems that come with distributed computing is how do you ensure a job only runs once. If you use a job queue, the job library will have mechanics to guarantee your job runs once. Throwing everything into a job queue is one way of solving the problem, however given the nature of jobs queue __when__ the job runs is pretty non-deterministic. It's close to real-time if your job queue is empty, and it can sit and wait in a queue if your system is busy. This can lead to a few problems. Given that this is an elixir based application, coming up with a simple mechanic to ensure updates in the system happen in real-time should be trivial.
 
 ![installation example](/images/work-distribution-with-jump-consistent-hash/installation-state-depends-on-instances.png)
 
@@ -210,6 +210,12 @@ I want to have the latest state computed, but I also realize that we do not need
  There are many ways one can solve such a problem, you could use something like `:swarm` where workers are created on a given event, run the job and then die off. This solution was simple to implement and worked really well and had very few dependencies. Overall I'm quite happy with the way things turned out. I get the real-time feeling of state changes and it looks really cool when you can see it in action in the UI.
 
  ![real time update](/images/work-distribution-with-jump-consistent-hash/real-time-event-update-instellar.gif)
+
+ ![log output](/images/work-distribution-with-jump-consistent-hash/log-output.png)
+
+ You can see from the log output that the work is evenly distributed across 3 nodes.
+
+ __Thank you for reading! If you need help with your distributed application or need help with DevOps / Deployment work, I'm available for consulting. Feel free to reach out to [me@zacksiri.dev](mailto:me@zacksiri.dev)__
 
  ## Bonus
 
