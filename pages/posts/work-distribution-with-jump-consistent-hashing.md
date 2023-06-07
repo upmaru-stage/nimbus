@@ -161,7 +161,7 @@ We will not compute the state inside the `init` function because when the nodes 
 
 ## Computing the State
 
-In my solution I compute the state in the `handle_info` which means when the event is fired. This is a lazy evaltuation because it means I'll always have the freshest state when the work needs to be done.
+In my solution I compute the state in the `handle_info` which means when the event is fired. It means I'll always have the freshest state when the work needs to be done.
 
 ```elixir
 @impl true
