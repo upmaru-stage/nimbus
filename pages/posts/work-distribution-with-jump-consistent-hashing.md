@@ -219,7 +219,7 @@ I want to have the latest state computed, but I also realize that we do not need
 
  ## Bonus
 
- In the example above I did the work of verifying the installation state right in the `GenServer` however in reality. There is another way we can make this more scalable. We can wrap the actual work load inside an async `Task` to achieve some sort of scalability. Since we only have 1 `Monitoring` worker on each node, it's smart to use it as a scheduler and delegate the actual work to an async `Task`. Here is an example how we can achieve this.
+ In the example above I did the work of verifying the installation state right in the `GenServer` however in reality there is another way we can make this more scalable. We can wrap the actual work load inside an async `Task` to achieve some sort of scalability. Since we only have 1 `Monitoring` worker on each node, it's smart to use it as a scheduler and delegate the actual work to an async `Task`. Here is an example how we can achieve this.
 
  ```elixir
  def handle_info({:verify, %Instance{installation_id: installation_id}}, state) do
