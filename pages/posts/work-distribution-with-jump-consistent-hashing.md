@@ -2,7 +2,7 @@
 title: Work distribution with Jump Consistent Hashing
 date: 2023/6/6
 description: How you can use jump consistent hashing to distribute workload in a distributed system.
-tag: development, distributed
+tag: development, distributed-computing
 author: Zack Siri
 ---
 
