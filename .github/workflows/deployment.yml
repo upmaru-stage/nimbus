@@ -4,11 +4,13 @@ on:
   push:
     branches:
       - main
+      - master
+      - develop
 
 jobs:
   build_and_deploy:
     name: Build and Deploy
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v3
@@ -17,7 +19,7 @@ jobs:
           fetch-depth: 0
 
       - name: 'Pakman'
-        uses: upmaru/pakman@develop
+        uses: upmaru/pakman@alpine-3.18-7.4
         with:
           command: 'bootstrap'
         env:
@@ -25,23 +27,23 @@ jobs:
           ABUILD_PUBLIC_KEY: ${{secrets.ABUILD_PUBLIC_KEY}}
 
       - name: 'Build APK'
-        uses: upmaru/pakman@develop
+        uses: upmaru/pakman@alpine-3.18-7.4
         with:
           entrypoint: /var/lib/pakman/bin/build.sh
 
       - name: 'Archive'
-        uses: upmaru/pakman@develop
+        uses: upmaru/pakman@alpine-3.18-7.4
         with:
           entrypoint: /var/lib/pakman/bin/archive.sh
 
       - name: 'Create Deployment'
-        uses: upmaru/pakman@develop
+        uses: upmaru/pakman@alpine-3.18-7.4
         with:
           command: 'create_deployment'
           archive: 'packages.zip'
         env:
           WORKFLOW_REF: ${{ github.ref }}
           WORKFLOW_SHA: ${{ github.sha }}
-          INSTELLAR_ENDPOINT: https://staging-web.instellar.app
+          INSTELLAR_ENDPOINT: https://sandbox.opsmaru.dev
           INSTELLAR_PACKAGE_TOKEN: ${{secrets.INSTELLAR_PACKAGE_TOKEN}}
           INSTELLAR_AUTH_TOKEN: ${{secrets.INSTELLAR_AUTH_TOKEN}}
