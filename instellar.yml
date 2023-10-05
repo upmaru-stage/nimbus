@@ -1,11 +1,10 @@
 dependencies:
-  trace: true
   build:
-    - nodejs
+    - nodejs-current
     - npm
     - vips-dev
   runtime:
-    - nodejs
+    - nodejs-current
     - npm
     - bash
     - curl
@@ -14,38 +13,36 @@ dependencies:
     - ca-certificates
     - icu-data-full
     - nimbus-openrc
+  trace: true
 
-stack: alpine/3.17
+stack: alpine/3.18
 
 build:
-  destinations: 
-    - '.next/standalone'
   command: |
     npm install
     npm run build
-
+    
     cp -r .next/static .next/standalone/.next/
     cp -r public .next/standalone/
+  destinations:
+    - .next/standalone
 
-run: 
+run:
   name: nimbus
   services:
-  - name: web
-    binary: node
-    path: /usr/bin
-    start:
-      call: 'standalone/server.js'
+    - name: web
+    - binary: node
+    - path: /usr/bin
+    - start:
+        call: standalone/server.js
 
 hook:
-  post-install: |
-    rc-update add nimbus
-
-  pre-upgrade: |
-    rc-service nimbus stop
-
-  post-upgrade: |
-    rc-service nimbus start
-
   post-deinstall: |
     rc-service nimbus stop
     rc-update del nimbus
+  post-install: |
+    rc-update add nimbus
+  post-upgrade: |
+    rc-service nimbus start
+  pre-upgrade: |
+    rc-service nimbus stop
