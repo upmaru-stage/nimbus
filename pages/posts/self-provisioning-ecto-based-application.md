@@ -270,6 +270,16 @@ As you can see all it's doing is run `apk add` to install postgresql. After the 
 
 There is no concern if `apk add` runs again because the command is idempotent.
 
+## Starting `Uplink.Data.Provisioner`
+
+Now that we have the module that handles the provisioning of the database, we can start it as a part of our main `Application` by simply adding:
+
+```elixir
+children = [
+  # ...
+  {Uplink.Data.Provisioner, []}
+]
+```
 
 ## Wrap Up
 
