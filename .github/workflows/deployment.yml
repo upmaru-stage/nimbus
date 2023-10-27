@@ -69,7 +69,7 @@ jobs:
         shell: alpine.sh {0}
 
       - name: Push
-        run: pakman push
+        run: pakman push --concurrency 3
         shell: alpine.sh {0}
         env:
           WORKFLOW_REF: ${{ github.ref }}
