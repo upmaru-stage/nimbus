@@ -46,3 +46,15 @@ run:
       path: /usr/bin
       start:
         call: standalone/server.js
+
+kits:
+  - description: web service
+    main: true
+    name: web
+    ports:
+      - main: true
+        name: web
+        target: 3000
+    variables:
+      - default_value: production
+        key: NODE_ENV
