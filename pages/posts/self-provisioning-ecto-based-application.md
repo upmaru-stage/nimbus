@@ -91,15 +91,15 @@ defmodule Uplink.Data.Provisioner do
 end
 ```
 
-As you can see it's just a standard `GenServer` taht boots up and sets the default state. Next let's add the code to detect pro/lite mode
+As you can see it's just a standard `GenServer` that boots up and sets the default state. Next let's add the code to detect pro/lite mode detection code.
 
 ```elixir
-  @impl true
-  def handle_info({:bootstrap, "pro"}, state) do
-    Uplink.Data.start_link([])
+@impl true
+def handle_info({:bootstrap, "pro"}, state) do
+  Uplink.Data.start_link([])
 
-    {:noreply, put_in(state.status, :ok)}
-  end
+  {:noreply, put_in(state.status, :ok)}
+end
 ```
 
 The pro mode is straight forward, it just proceeds to starting up the `Uplink.Data` module. The main logic is going to be in the `lite` mode. Let's take a look.
